@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/30 00:29:59.000.239,=C:\Users\JNCenter\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/30 00:31:23.000.106,C:\Adonai_O.S\UPrincipal.dfm=C:\Users\JNCenter\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/01/30 00:31:23.000.106,C:\Adonai_O.S\UPrincipal.pas=C:\Users\JNCenter\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/01/30 00:31:38.000.313,C:\Adonai_O.S\Adonai_OS.dproj=C:\Users\JNCenter\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2021/01/30 00:31:54.000.409,=C:\Adonai_O.S\ULogin.pas</Transaction>
+    <Transaction>2021/01/30 00:32:14.000.441,=C:\Adonai_O.S\Unit1.pas</Transaction>
+    <Transaction>2021/01/30 00:33:30.000.892,C:\Adonai_O.S\Database\UDM.dfm=C:\Adonai_O.S\Unit1.dfm</Transaction>
+    <Transaction>2021/01/30 00:33:30.000.892,C:\Adonai_O.S\Database\UDM.pas=C:\Adonai_O.S\Unit1.pas</Transaction>
+    <Transaction>2021/01/30 02:13:39.000.670,=C:\Adonai_O.S\Unit1.pas</Transaction>
+    <Transaction>2021/01/30 02:15:27.000.065,=C:\Adonai_O.S\Cadastros\UCadMembro.pas</Transaction>
+    <Transaction>2021/01/30 02:25:07.000.369,C:\Adonai_O.S\Cadastros\UCadClientes.dfm=C:\Adonai_O.S\Cadastros\UCadMembro.dfm</Transaction>
+    <Transaction>2021/01/30 02:25:07.000.369,C:\Adonai_O.S\Cadastros\UCadClientes.pas=C:\Adonai_O.S\Cadastros\UCadMembro.pas</Transaction>
+  </Transactions>
+</BorlandProject>

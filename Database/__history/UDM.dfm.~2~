@@ -1,0 +1,24 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 570
+  Width = 914
+  object FDConn: TFDConnection
+    Left = 24
+    Top = 8
+  end
+  object FBDriver: TFDPhysFBDriverLink
+    VendorLib = 'C:\Adonai_O.S\Firebird\fbclient.dll'
+    Left = 88
+    Top = 8
+  end
+  object WaitCursor: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 152
+    Top = 8
+  end
+  object TBL_ACESSO: TFDTable
+    Connection = FDConn
+    Left = 48
+    Top = 88
+  end
+end

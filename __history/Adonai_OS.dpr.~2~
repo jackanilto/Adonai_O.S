@@ -1,0 +1,18 @@
+program Adonai_OS;
+
+uses
+  Vcl.Forms,
+  UPrincipal in 'UPrincipal.pas' {FrmPrincipal},
+  ULogin in 'ULogin.pas' {FrmLogin},
+  UDM in 'Database\UDM.pas' {DM: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFrmLogin, FrmLogin);
+  Application.CreateForm(TDM, DM);
+  Application.Run;
+end.
