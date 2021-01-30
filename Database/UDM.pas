@@ -39,7 +39,6 @@ type
     TBL_CLIENTESEMAIL: TStringField;
     TBL_CLIENTESCNPJCPF: TStringField;
     procedure DataModuleCreate(Sender: TObject);
-    procedure DataModuleDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,11 +55,6 @@ implementation
 {$R *.dfm}
 
 procedure TDM.DataModuleCreate(Sender: TObject);
-begin
-  FDConn.Connected := true;
-end;
-
-procedure TDM.DataModuleDestroy(Sender: TObject);
 begin
   FDConn.Connected := false;
 end;
