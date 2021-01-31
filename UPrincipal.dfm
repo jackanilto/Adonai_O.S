@@ -14,7 +14,7 @@ object FrmPrincipal: TFrmPrincipal
   Font.Style = []
   Menu = MainMenu1
   OldCreateOrder = False
-  Position = poDesigned
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -24,7 +24,6 @@ object FrmPrincipal: TFrmPrincipal
     Height = 73
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 1154
   end
   object MainMenu1: TMainMenu
     Left = 848
