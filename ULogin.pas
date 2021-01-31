@@ -156,6 +156,4 @@ begin
 end;
   //Fim do codigo login
 
-//Procedure para pegar a versao do programa
-
 end.

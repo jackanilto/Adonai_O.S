@@ -2284,7 +2284,7 @@ object FrmLogin: TFrmLogin
     AlignWithMargins = True
     Left = 134
     Top = 24
-    Width = 187
+    Width = 184
     Height = 47
     Alignment = taCenter
     Caption = 'Adonai O.S'
