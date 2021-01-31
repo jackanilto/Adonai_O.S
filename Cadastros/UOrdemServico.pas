@@ -4,7 +4,9 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
+  Vcl.Mask, JvExMask, JvToolEdit, JvMaskEdit, JvCheckedMaskEdit,
+  JvDatePickerEdit;
 
 type
   TFrmOS = class(TForm)
@@ -32,6 +34,27 @@ type
     btnEditar: TBitBtn;
     btnDeletar: TBitBtn;
     EditID: TEdit;
+    JvDatePickerEdit1: TJvDatePickerEdit;
+    Label2: TLabel;
+    EditNOS: TEdit;
+    Label8: TLabel;
+    EditCONTATO: TEdit;
+    Label9: TLabel;
+    PanelDadosCliente: TPanel;
+    Label10: TLabel;
+    PanelDadosOS: TPanel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    EditGARANTIA: TEdit;
+    EditFECHAMENTO: TEdit;
+    cbPOSICAO: TComboBox;
+    EditVALOR: TEdit;
+    memoSERVICO: TMemo;
+    procedure btnSAIRClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,5 +67,10 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmOS.btnSAIRClick(Sender: TObject);
+begin
+FrmOS.Close;
+end;
 
 end.

@@ -3,9 +3,9 @@ object FrmOS: TFrmOS
   Top = 0
   BorderIcons = []
   BorderStyle = bsSizeToolWin
-  Caption = 'Ordem de Servi'#231'o'
+  Caption = 'edi'
   ClientHeight = 515
-  ClientWidth = 905
+  ClientWidth = 839
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,127 +17,180 @@ object FrmOS: TFrmOS
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 7
-    Top = 77
+    Left = 206
+    Top = 96
     Width = 34
     Height = 13
     Caption = 'Nome: '
   end
   object Label3: TLabel
-    Left = 212
-    Top = 77
+    Left = 7
+    Top = 134
     Width = 49
     Height = 13
     Caption = 'Endere'#231'o:'
   end
   object Label6: TLabel
-    Left = 417
-    Top = 77
+    Left = 265
+    Top = 134
     Width = 16
     Height = 13
     Caption = 'N'#186':'
   end
   object Label5: TLabel
-    Left = 496
-    Top = 77
+    Left = 344
+    Top = 134
     Width = 32
     Height = 13
     Caption = 'Bairro:'
   end
   object Label4: TLabel
-    Left = 623
-    Top = 77
+    Left = 506
+    Top = 134
     Width = 33
     Height = 13
     Caption = 'Cidade'
   end
   object Estado: TLabel
-    Left = 749
-    Top = 77
+    Left = 683
+    Top = 134
     Width = 37
     Height = 13
     Caption = 'Estado:'
   end
   object Label7: TLabel
-    Left = 213
-    Top = 114
+    Left = 456
+    Top = 96
     Width = 61
     Height = 13
     Caption = 'Tel. Pessoal:'
   end
   object Label11: TLabel
-    Left = 778
-    Top = 114
+    Left = 708
+    Top = 96
     Width = 54
     Height = 13
     Caption = 'CPNJ / CPF'
   end
+  object Label2: TLabel
+    Left = 8
+    Top = 96
+    Width = 37
+    Height = 13
+    Caption = 'N'#186' O.S.'
+  end
+  object Label8: TLabel
+    Left = 95
+    Top = 96
+    Width = 42
+    Height = 13
+    Caption = 'Entrada:'
+  end
+  object Label9: TLabel
+    Left = 581
+    Top = 96
+    Width = 39
+    Height = 13
+    Caption = 'Contato'
+  end
+  object Label14: TLabel
+    Left = 8
+    Top = 219
+    Width = 39
+    Height = 13
+    Caption = 'Servi'#231'o:'
+  end
+  object Label15: TLabel
+    Left = 687
+    Top = 329
+    Width = 28
+    Height = 13
+    Caption = 'Valor:'
+  end
+  object Label16: TLabel
+    Left = 687
+    Top = 248
+    Width = 40
+    Height = 13
+    Caption = 'Posi'#231#227'o:'
+  end
+  object Label17: TLabel
+    Left = 687
+    Top = 289
+    Width = 89
+    Height = 13
+    Caption = 'Data Fechamento:'
+  end
+  object Label18: TLabel
+    Left = 8
+    Top = 351
+    Width = 45
+    Height = 13
+    Caption = 'Garantia:'
+  end
   object EditNOME: TEdit
-    Left = 7
-    Top = 93
-    Width = 199
+    Left = 206
+    Top = 112
+    Width = 244
     Height = 21
     TabOrder = 0
   end
   object EditENDERECO: TEdit
-    Left = 213
-    Top = 93
-    Width = 199
+    Left = 8
+    Top = 150
+    Width = 244
     Height = 21
     TabOrder = 1
   end
   object EditNUMERO: TEdit
-    Left = 417
-    Top = 93
+    Left = 265
+    Top = 150
     Width = 72
     Height = 21
     TabOrder = 2
   end
   object EditBAIRRO: TEdit
-    Left = 496
-    Top = 93
-    Width = 120
+    Left = 344
+    Top = 150
+    Width = 156
     Height = 21
     TabOrder = 3
   end
   object EditCIDADE: TEdit
-    Left = 623
-    Top = 93
-    Width = 120
+    Left = 506
+    Top = 150
+    Width = 171
     Height = 21
     TabOrder = 4
   end
   object EditESTADO: TEdit
-    Left = 749
-    Top = 93
+    Left = 683
+    Top = 150
     Width = 149
     Height = 21
     TabOrder = 5
   end
   object EditTELPESSOAL: TEdit
-    Left = 213
-    Top = 130
+    Left = 456
+    Top = 112
     Width = 120
     Height = 21
     TabOrder = 6
   end
   object EditCNPJCPF: TEdit
-    Left = 777
-    Top = 130
-    Width = 121
+    Left = 708
+    Top = 112
+    Width = 124
     Height = 21
     TabOrder = 7
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 905
+    Width = 839
     Height = 65
     Align = alTop
     TabOrder = 8
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 665
     object btnSAIR: TSpeedButton
       Left = 249
       Top = 4
@@ -362,13 +415,14 @@ object FrmOS: TFrmOS
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+      OnClick = btnSAIRClick
     end
     object Label12: TLabel
-      Left = 810
-      Top = 13
-      Width = 33
+      Left = 744
+      Top = 20
+      Width = 67
       Height = 13
-      Caption = 'C'#243'digo'
+      Caption = 'N'#186' de registro'
     end
     object btnNovo: TBitBtn
       Left = 5
@@ -2143,11 +2197,120 @@ object FrmOS: TFrmOS
       TabOrder = 3
     end
     object EditID: TEdit
-      Left = 810
-      Top = 32
+      Left = 744
+      Top = 39
       Width = 88
       Height = 21
       TabOrder = 4
     end
+  end
+  object JvDatePickerEdit1: TJvDatePickerEdit
+    Left = 95
+    Top = 112
+    Width = 105
+    Height = 21
+    AllowNoDate = True
+    Checked = True
+    TabOrder = 9
+  end
+  object EditNOS: TEdit
+    Left = 8
+    Top = 112
+    Width = 81
+    Height = 21
+    TabOrder = 10
+  end
+  object EditCONTATO: TEdit
+    Left = 581
+    Top = 112
+    Width = 121
+    Height = 21
+    TabOrder = 11
+  end
+  object PanelDadosCliente: TPanel
+    Left = 4
+    Top = 70
+    Width = 828
+    Height = 22
+    TabOrder = 12
+    object Label10: TLabel
+      Left = 0
+      Top = 3
+      Width = 108
+      Height = 16
+      Alignment = taCenter
+      Caption = 'Dados do Cliente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object PanelDadosOS: TPanel
+    Left = 8
+    Top = 196
+    Width = 823
+    Height = 22
+    TabOrder = 13
+    object Label13: TLabel
+      Left = 1
+      Top = 1
+      Width = 178
+      Height = 16
+      Alignment = taCenter
+      Caption = 'Dados da Ordem de Servi'#231'o'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object EditGARANTIA: TEdit
+    Left = 59
+    Top = 348
+    Width = 618
+    Height = 21
+    TabOrder = 14
+  end
+  object EditFECHAMENTO: TEdit
+    Left = 687
+    Top = 308
+    Width = 142
+    Height = 21
+    TabOrder = 15
+  end
+  object cbPOSICAO: TComboBox
+    Left = 687
+    Top = 265
+    Width = 145
+    Height = 21
+    ItemIndex = 0
+    TabOrder = 16
+    Text = 'Aberto'
+    Items.Strings = (
+      'Aberto'
+      'Fechado'
+      'Aguardando Pe'#231'as'
+      'Aguardando autoriza'#231#227'o')
+  end
+  object EditVALOR: TEdit
+    Left = 687
+    Top = 348
+    Width = 144
+    Height = 21
+    TabOrder = 17
+  end
+  object memoSERVICO: TMemo
+    Left = 8
+    Top = 238
+    Width = 669
+    Height = 104
+    Lines.Strings = (
+      '')
+    TabOrder = 18
   end
 end
