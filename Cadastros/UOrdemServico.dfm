@@ -2302,7 +2302,11 @@ object FrmOS: TFrmOS
     Top = 348
     Width = 144
     Height = 21
+    BiDiMode = bdRightToLeft
+    ParentBiDiMode = False
     TabOrder = 17
+    OnChange = EditVALORChange
+    OnKeyPress = EditVALORKeyPress
   end
   object memoSERVICO: TMemo
     Left = 8
