@@ -38,6 +38,25 @@ type
     TBL_CLIENTESCONTATO2: TStringField;
     TBL_CLIENTESEMAIL: TStringField;
     TBL_CLIENTESCNPJCPF: TStringField;
+    DSOs: TDataSource;
+    QueryOS: TFDQuery;
+    TBL_OS: TFDTable;
+    TBL_OSID: TIntegerField;
+    TBL_OSDATAENTRA: TStringField;
+    TBL_OSNOME: TStringField;
+    TBL_OSTEL: TStringField;
+    TBL_OSCONTATO: TStringField;
+    TBL_OSENDERECO: TStringField;
+    TBL_OSCOMPLEMENTO: TStringField;
+    TBL_OSBAIRRO: TStringField;
+    TBL_OSCIDADE: TStringField;
+    TBL_OSESTADO: TStringField;
+    TBL_OSSERVICO: TStringField;
+    TBL_OSVALOR: TStringField;
+    TBL_OSPOSICAO: TStringField;
+    TBL_OSDATAFECHA: TStringField;
+    TBL_OSGARANTIA: TStringField;
+    TBL_OSVALORTOTAL: TStringField;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -56,7 +75,7 @@ implementation
 
 procedure TDM.DataModuleCreate(Sender: TObject);
 begin
-  FDConn.Connected := false;
+  FDConn.Connected := true;
 end;
 
 end.

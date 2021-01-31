@@ -9,6 +9,7 @@ object DM: TDM
       'User_Name=SYSDBA'
       'Password=masterkey'
       'DriverID=FB')
+    Connected = True
     LoginPrompt = False
     Left = 24
     Top = 8
@@ -62,7 +63,7 @@ object DM: TDM
     Connection = FDConn
     UpdateOptions.UpdateTableName = 'TBL_CLIENTES'
     TableName = 'TBL_CLIENTES'
-    Left = 120
+    Left = 152
     Top = 88
     object TBL_CLIENTESID: TIntegerField
       AutoGenerateValue = arAutoInc
@@ -138,14 +139,113 @@ object DM: TDM
   end
   object DSClientes: TDataSource
     DataSet = QueryClientes
-    Left = 120
+    Left = 152
     Top = 144
   end
   object QueryClientes: TFDQuery
     Connection = FDConn
     SQL.Strings = (
       'select * from TBL_CLIENTES')
-    Left = 120
+    Left = 152
     Top = 200
+  end
+  object DSOs: TDataSource
+    DataSet = QueryOS
+    Left = 240
+    Top = 144
+  end
+  object QueryOS: TFDQuery
+    Connection = FDConn
+    SQL.Strings = (
+      'select * from TBL_OS')
+    Left = 240
+    Top = 200
+  end
+  object TBL_OS: TFDTable
+    Connection = FDConn
+    UpdateOptions.UpdateTableName = 'TBL_OS'
+    TableName = 'TBL_OS'
+    Left = 240
+    Top = 96
+    object TBL_OSID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      Required = True
+    end
+    object TBL_OSDATAENTRA: TStringField
+      FieldName = 'DATAENTRA'
+      Origin = 'DATAENTRA'
+      Size = 80
+    end
+    object TBL_OSNOME: TStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 150
+    end
+    object TBL_OSTEL: TStringField
+      FieldName = 'TEL'
+      Origin = 'TEL'
+      Size = 80
+    end
+    object TBL_OSCONTATO: TStringField
+      FieldName = 'CONTATO'
+      Origin = 'CONTATO'
+      Size = 100
+    end
+    object TBL_OSENDERECO: TStringField
+      FieldName = 'ENDERECO'
+      Origin = 'ENDERECO'
+      Size = 150
+    end
+    object TBL_OSCOMPLEMENTO: TStringField
+      FieldName = 'COMPLEMENTO'
+      Origin = 'COMPLEMENTO'
+      Size = 80
+    end
+    object TBL_OSBAIRRO: TStringField
+      FieldName = 'BAIRRO'
+      Origin = 'BAIRRO'
+      Size = 100
+    end
+    object TBL_OSCIDADE: TStringField
+      FieldName = 'CIDADE'
+      Origin = 'CIDADE'
+      Size = 150
+    end
+    object TBL_OSESTADO: TStringField
+      FieldName = 'ESTADO'
+      Origin = 'ESTADO'
+      Size = 15
+    end
+    object TBL_OSSERVICO: TStringField
+      FieldName = 'SERVICO'
+      Origin = 'SERVICO'
+      Size = 1500
+    end
+    object TBL_OSVALOR: TStringField
+      FieldName = 'VALOR'
+      Origin = 'VALOR'
+      Size = 80
+    end
+    object TBL_OSPOSICAO: TStringField
+      FieldName = 'POSICAO'
+      Origin = 'POSICAO'
+      Size = 80
+    end
+    object TBL_OSDATAFECHA: TStringField
+      FieldName = 'DATAFECHA'
+      Origin = 'DATAFECHA'
+      Size = 80
+    end
+    object TBL_OSGARANTIA: TStringField
+      FieldName = 'GARANTIA'
+      Origin = 'GARANTIA'
+      Size = 150
+    end
+    object TBL_OSVALORTOTAL: TStringField
+      FieldName = 'VALORTOTAL'
+      Origin = 'VALORTOTAL'
+      Size = 80
+    end
   end
 end
