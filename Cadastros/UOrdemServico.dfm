@@ -61,9 +61,9 @@ object FrmOS: TFrmOS
   object Label7: TLabel
     Left = 456
     Top = 96
-    Width = 61
+    Width = 46
     Height = 13
-    Caption = 'Tel. Pessoal:'
+    Caption = 'Telefone:'
   end
   object Label11: TLabel
     Left = 708
@@ -142,7 +142,7 @@ object FrmOS: TFrmOS
     Height = 21
     TabOrder = 1
   end
-  object EditNUMERO: TEdit
+  object EditCOMPLEMENTO: TEdit
     Left = 265
     Top = 150
     Width = 72
@@ -170,7 +170,7 @@ object FrmOS: TFrmOS
     Height = 21
     TabOrder = 5
   end
-  object EditTELPESSOAL: TEdit
+  object EditTEL: TEdit
     Left = 456
     Top = 112
     Width = 120
@@ -2204,7 +2204,7 @@ object FrmOS: TFrmOS
       TabOrder = 4
     end
   end
-  object JvDatePickerEdit1: TJvDatePickerEdit
+  object dataENTRADA: TJvDatePickerEdit
     Left = 95
     Top = 112
     Width = 105
@@ -2213,7 +2213,7 @@ object FrmOS: TFrmOS
     Checked = True
     TabOrder = 9
   end
-  object EditNOS: TEdit
+  object EditNUMOS: TEdit
     Left = 8
     Top = 112
     Width = 81

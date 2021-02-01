@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
   Vcl.Mask, JvExMask, JvToolEdit, JvMaskEdit, JvCheckedMaskEdit,
-  JvDatePickerEdit;
+  JvDatePickerEdit, UDM;
 
 type
   TFrmOS = class(TForm)
@@ -15,7 +15,7 @@ type
     Label3: TLabel;
     EditENDERECO: TEdit;
     Label6: TLabel;
-    EditNUMERO: TEdit;
+    EditCOMPLEMENTO: TEdit;
     Label5: TLabel;
     EditBAIRRO: TEdit;
     Label4: TLabel;
@@ -23,7 +23,7 @@ type
     Estado: TLabel;
     EditESTADO: TEdit;
     Label7: TLabel;
-    EditTELPESSOAL: TEdit;
+    EditTEL: TEdit;
     Label11: TLabel;
     EditCNPJCPF: TEdit;
     Panel1: TPanel;
@@ -34,9 +34,9 @@ type
     btnEditar: TBitBtn;
     btnDeletar: TBitBtn;
     EditID: TEdit;
-    JvDatePickerEdit1: TJvDatePickerEdit;
+    dataENTRADA: TJvDatePickerEdit;
     Label2: TLabel;
-    EditNOS: TEdit;
+    EditNUMOS: TEdit;
     Label8: TLabel;
     EditCONTATO: TEdit;
     Label9: TLabel;
@@ -61,6 +61,14 @@ type
     { Private declarations }
   public
     { Public declarations }
+   procedure limparCampos();
+   procedure habilitarCampos();
+   procedure desabilitarCampos();
+//   procedure buscarTudo();
+//   procedure buscarNome();
+//   procedure buscarSerial();
+//   procedure buscarOS();
+   procedure associarCampos();
   end;
 
 var
@@ -75,9 +83,48 @@ implementation
 
 {$R *.dfm}
 
+procedure TFrmOS.associarCampos;
+begin
+  DM.TBL_OS.FieldByName('NUMOS')      .AsInteger := EditNUMOS.Text;
+  DM.TBL_OS.FieldByName('DATAENTRA')  .AsString  := dataENTRADA.Date;
+  DM.TBL_OS.FieldByName('NOME')       .AsInteger := EditNOME.Text;
+  DM.TBL_OS.FieldByName('TEL')        .AsInteger := EditTEL.Text;
+  DM.TBL_OS.FieldByName('CONTATO')    .AsInteger := EditCONTATO.Text;
+  DM.TBL_OS.FieldByName('CONTATO')    .AsInteger := EditCONTATO.Text;
+  DM.TBL_OS.FieldByName('CNPJCPF')    .AsInteger := EditCNPJCPF.Text;
+  DM.TBL_OS.FieldByName('ENDERECO')   .AsInteger := EditENDERECO.Text;
+  DM.TBL_OS.FieldByName('COMPLEMENTO').AsInteger := EditCOMPLEMENTO.Text;
+  DM.TBL_OS.FieldByName('BAIRRO')     .AsInteger := EditBAIRRO.Text;
+  DM.TBL_OS.FieldByName('CIDADE')     .AsInteger := EditCIDADE.Text;
+  DM.TBL_OS.FieldByName('ESTADO')     .AsInteger := EditESTADO.Text;
+  DM.TBL_OS.FieldByName('SERVICO')    .AsInteger := memoSERVICO.Text;
+  DM.TBL_OS.FieldByName('VALOR')      .AsInteger := EditVALOR.Text;
+  DM.TBL_OS.FieldByName('POSICAO')    .AsInteger := cbPOSICAO.Text;
+  DM.TBL_OS.FieldByName('GARANTIA')   .AsInteger := EditGARANTIA.Text;
+end;
+
 procedure TFrmOS.btnSAIRClick(Sender: TObject);
 begin
 FrmOS.Close;
+end;
+
+procedure TFrmOS.desabilitarCampos;
+begin
+  limparCampos;
+  EditNUMOS       .Enabled := False;
+  EditNOME        .Enabled := False;
+  EditTEL         .Enabled := False;
+  EditCONTATO     .Enabled := False;
+  EditCNPJCPF     .Enabled := False;
+  EditENDERECO    .Enabled := False;
+  EditCOMPLEMENTO .Enabled := False;
+  EditBAIRRO      .Enabled := False;
+  EditCIDADE      .Enabled := False;
+  EditESTADO      .Enabled := False;
+  memoSERVICO     .Enabled := False;
+  EditVALOR       .Enabled := False;
+  cbPOSICAO       .Enabled := False;
+  EditGARANTIA    .Enabled := False;
 end;
 
 procedure TFrmOS.EditVALORChange(Sender: TObject);
@@ -109,6 +156,44 @@ begin
      key := #0;
      //Função posiciona o cursor sempre a direita como nos Caixas Eletronicos
      Editvalor.selstart := Length(Editvalor.text);
+end;
+
+procedure TFrmOS.habilitarCampos;
+begin
+  limparCampos;
+  EditNUMOS       .Enabled := True;
+  EditNOME        .Enabled := True;
+  EditTEL         .Enabled := True;
+  EditCONTATO     .Enabled := True;
+  EditCNPJCPF     .Enabled := True;
+  EditENDERECO    .Enabled := True;
+  EditCOMPLEMENTO .Enabled := True;
+  EditBAIRRO      .Enabled := True;
+  EditCIDADE      .Enabled := True;
+  EditESTADO      .Enabled := True;
+  memoSERVICO     .Enabled := True;
+  EditVALOR       .Enabled := True;
+  cbPOSICAO       .Enabled := True;
+  EditGARANTIA    .Enabled := True;
+end;
+
+procedure TFrmOS.limparCampos;
+begin
+  limparCampos;
+  EditNUMOS       .Text  := '';
+  EditNOME        .Text  := '';
+  EditTEL         .Text  := '';
+  EditCONTATO     .Text  := '';
+  EditCNPJCPF     .Text  := '';
+  EditENDERECO    .Text  := '';
+  EditCOMPLEMENTO .Text  := '';
+  EditBAIRRO      .Text  := '';
+  EditCIDADE      .Text  := '';
+  EditESTADO      .Text  := '';
+  memoSERVICO     .Text  := '';
+  EditVALOR       .Text  := '';
+  cbPOSICAO       .Text  := '';
+  EditGARANTIA    .Text  := '';
 end;
 
 end.
