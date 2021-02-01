@@ -19,6 +19,7 @@ type
     Label2: TLabel;
     procedure FormShow(Sender: TObject);
     procedure EditBUSCARChange(Sender: TObject);
+    procedure EditCONS_OSChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,7 +42,7 @@ begin
   dm.QueryOS.Close;
   dm.QueryOS.SQL.Clear;                                 //add collate win_ptbr para busca CASE INSESITIVE
   dm.QueryOS.SQL.Add('select * from TBL_OS where nome collate win_ptbr LIKE :nome order by nome asc');
-  dm.QueryOS.ParamByName('nome').Value := EditBUSCAR.Text + '%';
+  dm.QueryOS.ParamByName('nome').Value := '%'+ EditBUSCAR.Text + '%';
   dm.QueryOS.Open;
 end;
 
@@ -49,9 +50,17 @@ procedure TFrmPesquisa.BUSCARNSERIE;
 begin
   dm.QueryOS.Close;
   dm.QueryOS.SQL.Clear;                                 //add collate win_ptbr para busca CASE INSESITIVE
-  dm.QueryOS.SQL.Add('select * from TBL_OS where NSERIE collate win_ptbr LIKE :nome order by nome asc');
-  dm.QueryOS.ParamByName('nome').Value := EditBUSCAR.Text + '%';
+  dm.QueryOS.SQL.Add('select * from TBL_OS where NSERIE1 collate win_ptbr LIKE :NSERIE1');
+  dm.QueryOS.ParamByName('NSERIE1').Value := '%'+ EditBUSCAR.Text + '%';
   dm.QueryOS.Open;
+//
+//  dm.QueryOS.Close;
+//  dm.QueryOS.SQL.Clear;                                 //add collate win_ptbr para busca CASE INSESITIVE
+//  dm.QueryOS.SQL.Add('select * from TBL_OS where NSERIE1, NSERIE2, NSERIE3 collate win_ptbr LIKE :NSERIE1, :NSERIE2, :NSERIE3');
+//  dm.QueryOS.ParamByName('NSERIE1').Value := '%'+ EditBUSCAR.Text + '%';
+//  dm.QueryOS.ParamByName('NSERIE2').Value := '%'+ EditBUSCAR.Text + '%';
+//  dm.QueryOS.ParamByName('NSERIE3').Value := '%'+ EditBUSCAR.Text + '%';
+//  dm.QueryOS.Open;
 end;
 
 procedure TFrmPesquisa.BUSCARORDEM;
@@ -70,6 +79,11 @@ end;
 procedure TFrmPesquisa.EditBUSCARChange(Sender: TObject);
 begin
   BUSCARNOME;
+end;
+
+procedure TFrmPesquisa.EditCONS_OSChange(Sender: TObject);
+begin
+  BUSCARNSERIE;
 end;
 
 procedure TFrmPesquisa.FormShow(Sender: TObject);

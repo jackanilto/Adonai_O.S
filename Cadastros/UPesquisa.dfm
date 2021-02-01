@@ -190,6 +190,7 @@ object FrmPesquisa: TFrmPesquisa
       Width = 180
       Height = 21
       TabOrder = 1
+      OnChange = EditCONS_OSChange
     end
     object Edit1: TEdit
       Left = 8
